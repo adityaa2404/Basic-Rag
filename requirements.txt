@@ -1,0 +1,24 @@
+# requirements.txt
+google-generativeai
+pinecone-client
+langchain-google-genai
+langchain-pinecone
+langchain
+langchain-community
+pymupdf
+tiktoken
+pandas
+openpyxl
+python-dotenv
+fastapi
+uvicorn[standard]
+streamlit
+requests
+pydantic
+python-multipart
+gunicorn
+bcrypt
+pymongo
+certifi
+python-jose[cryptography]
+passlib

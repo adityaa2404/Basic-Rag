@@ -1,0 +1,13 @@
+# .gitignore
+
+# Environment
+venv/
+.env
+
+# Database and Uploads
+*.db
+uploads/
+
+# Python cache
+__pycache__/
+*.pyc
