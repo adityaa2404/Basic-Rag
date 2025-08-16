@@ -83,7 +83,7 @@ class RAGSystem:
     def _process_pdf_page(self, page_data):
         page_num, pdf_path = page_data
         standardized_path = pdf_path.replace(os.sep, '/')
-        # NOTE: The PyMuPDF doc object is opened and closed within this function
+        
         doc = pymupdf.open(pdf_path)
         page = doc.load_page(page_num)
         processed_units = []
@@ -107,19 +107,18 @@ class RAGSystem:
         ext = os.path.splitext(file_path)[1].lower()
         documents = []
         
-        ### MODIFIED SECTION ###
-        # Replaced parallel processing with a simple, robust loop
+        
         if ext == ".pdf":
             try:
                 doc = pymupdf.open(file_path)
-                # Process pages sequentially in a simple loop
+                
                 for i in range(len(doc)):
                     result = self._process_pdf_page((i, file_path))
                     documents.extend(result)
                 doc.close()
             except Exception as e:
                 print(f"Error loading PDF file {file_path}: {e}")
-        ### END MODIFIED SECTION ###
+        
 
         elif ext == ".txt":
             try:
@@ -143,7 +142,7 @@ class RAGSystem:
         if not documents: return []
         text_splitter = RecursiveCharacterTextSplitter(chunk_size=self.chunk_size, chunk_overlap=self.chunk_overlap)
         chunks = text_splitter.split_documents(documents)
-        print(f"🧩 Created {len(chunks)} chunks from the document.")
+        print(f" Created {len(chunks)} chunks from the document.")
         return chunks
 
     def index_documents(self, documents: List[Document]):
@@ -163,6 +162,15 @@ class RAGSystem:
         page_numbers = sorted(list(set([doc.metadata.get('page') for doc in retrieved_docs if doc.metadata.get('page')])))
         sources = sorted(list(set([os.path.basename(doc.metadata.get('source', '')) for doc in retrieved_docs if doc.metadata.get('source')])))
         prompt = f"""
+        Follow these instructions strictly:
+        - Include every piece of information that directly answers any part of the original question.
+        - Keep it concise—aim for 3–5 sentences maximum.
+        - **Maintain a natural, human tone (as if you’re explaining to a friend).**
+        - Do not prefix with "Here’s a summary" or use list formatting.
+        -Do not omit any critical detail that answers the user’s question.
+        You must answer based only on the CONTEXT below. 
+        If the answer is not fully supported by the context, say you don’t have enough information.
+
         CONTEXT:
         ---
         {context}

@@ -41,9 +41,9 @@ async def upload_files(files: List[UploadFile] = File(...)):
             documents = rag_system.load_document(file_path)
             chunks = rag_system.chunk_documents(documents)
             
-            # --- THIS IS THE NEW, CRITICAL CHECK ---
+            #check
             if not chunks:
-                # If no chunks were created, raise an error instead of pretending it was a success.
+                # If no chunks were created
                 raise HTTPException(
                     status_code=422, # Unprocessable Entity
                     detail=f"Failed to extract any text or data from '{file.filename}'. The file may be an image, empty, or corrupted."
@@ -52,7 +52,7 @@ async def upload_files(files: List[UploadFile] = File(...)):
             rag_system.index_documents(chunks)
             
         except Exception as e:
-            # Re-raise existing exceptions
+            # Re-raise 
             raise HTTPException(status_code=500, detail=f"Failed to process file {file.filename}: {e}")
 
     return {"message": "Files processed successfully.", "filenames": filenames}

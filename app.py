@@ -3,18 +3,18 @@ import streamlit as st
 import requests
 import os
 
-# --- Configuration ---
+# config
 BACKEND_URL = "http://127.0.0.1:8000"
 
-# --- Session State Initialization ---
+# Initialn
 if "processed_files" not in st.session_state:
     st.session_state.processed_files = []
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
-# --- UI ---
+# UI 
 st.set_page_config(page_title="📄 Document Q&A", layout="wide")
-st.title("📄 Query Your Documents")
+st.title("📄 Welcome to RAGify")
 
 def remove_file(filename):
     """Callback function to handle file removal."""
@@ -23,7 +23,7 @@ def remove_file(filename):
         if response.status_code == 200:
             st.session_state.processed_files.remove(filename)
             
-            ### THIS IS THE NEW LINE TO FIX THE BUG ###
+            ### bugg fix :)
             st.session_state.messages = [] 
             
             st.toast(f"✅ Removed {filename} successfully!")
@@ -63,7 +63,7 @@ with st.sidebar:
             with col1: st.text(filename)
             with col2: st.button("Remove", key=f"remove_{filename}", on_click=remove_file, args=[filename], use_container_width=True)
 
-# --- Main Chat Interface ---
+# main ci
 st.header("Ask a Question")
 
 for message in st.session_state.messages:
@@ -84,8 +84,8 @@ if prompt := st.chat_input("Ask about your documents..."):
                     if response.status_code == 200:
                         result = response.json()
                         answer = result.get("answer", "No answer found.")
-                        sources = result.get("sources", [])
-                        full_response = f"{answer}\n\n*Sources: {', '.join(sources)}*"
+                        #sources = result.get("sources", [])
+                        full_response = f"{answer}\n\n"
                         st.markdown(full_response)
                         st.session_state.messages.append({"role": "assistant", "content": full_response})
                     else:
