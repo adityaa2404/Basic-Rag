@@ -1,5 +1,5 @@
 # RAGify - Document Q&A with AI
-<img src="static/small.png" width="30" height="30" align="left">
+<img src="static/logo.png" width="50" height="50" align="left">
 <!-- Tech Stack Badges -->
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white" />
