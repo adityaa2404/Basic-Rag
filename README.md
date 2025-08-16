@@ -1,9 +1,17 @@
-# 📄 RAGify
+# 📄 RAGify - Document Q&A with AI
 
-**Enterprise Search, Reinvented.**
+<!-- Tech Stack Badges -->
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/FastAPI-async-green?logo=fastapi" />
+  <img src="https://img.shields.io/badge/Google%20Gemini-LLM-gold?logo=google" />
+  <img src="https://img.shields.io/badge/Pinecone-VectorDB-blue?logo=pinecone" />
+  
+</p>
 
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+**Enterprise Search, Reinvented.**  
+**Theme:** AI in Business
+
 
 > RAGify is an intelligent, full-stack application that allows you to chat with your documents. Upload PDFs, text, or Excel files and get instant, context-aware answers using a powerful **Retrieval-Augmented Generation (RAG)** pipeline.
 >
@@ -103,7 +111,7 @@ Follow these instructions to set up and run the project on your local machine.
 2.  **Create and activate a virtual environment:**
     ```sh
     python -m venv venv
-    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+    venv\Scripts\activate   
     ```
 
 3.  **Install the required dependencies:**
@@ -154,7 +162,6 @@ The backend provides the following RESTful API endpoints, which are consumed by 
 ---
 
 ## 👥 Authors
-
--   **Soham Dawkhar** (PICT, Pune ECE 2027)
 -   **Manas Pawar** (PICT, Pune IT 2027)
+-   **Soham Dawkhar** (PICT, Pune ECE 2027)
 -   **Aditya Potdar** (PICT, Pune ECE 2027)

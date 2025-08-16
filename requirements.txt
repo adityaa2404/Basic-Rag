@@ -1,4 +1,4 @@
-# requirements.txt
+# #requirements.txt
 google-generativeai
 pinecone-client
 langchain-google-genai
