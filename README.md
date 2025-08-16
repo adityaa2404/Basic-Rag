@@ -1,11 +1,13 @@
-# RAGify - Document Q&A with AI
-<img src="static/logo.png" width="50" height="50" align="left">
+# 📄 RAGify - Document Q&A with AI
+
 <!-- Tech Stack Badges -->
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/FastAPI-async-green?logo=fastapi" />
   <img src="https://img.shields.io/badge/Google%20Gemini-LLM-gold?logo=google" />
   <img src="https://img.shields.io/badge/Pinecone-VectorDB-blue?logo=pinecone" />
+  
+  <img src="https://img.shields.io/badge/LangChain-Orchestration-purple?logo=langchain" />
   
 </p>
 
