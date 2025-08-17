@@ -1,4 +1,4 @@
-# 📄 SMART-RAG - Document Q&A with AI
+# 📄 SMART-RAG : Document Q&A with AI
 
 <!-- Tech Stack Badges -->
 <p align="center">
