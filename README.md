@@ -1,4 +1,4 @@
-# 📄 RAGify - Document Q&A with AI
+# 📄 SMART-RAG - Document Q&A with AI
 
 <!-- Tech Stack Badges -->
 <p align="center">
@@ -15,7 +15,7 @@
 **Theme:** AI in Business
 
 
-> RAGify is an intelligent, full-stack application that allows you to chat with your documents. Upload PDFs, text, or Excel files and get instant, context-aware answers using a powerful **Retrieval-Augmented Generation (RAG)** pipeline.
+> SMART-RAG is an intelligent, full-stack application that allows you to chat with your documents. Upload PDFs, text, or Excel files and get instant, context-aware answers using a powerful **Retrieval-Augmented Generation (RAG)** pipeline.
 >
 > **Note:** The current frontend is built with **Streamlit** for rapid prototyping and ease of use.
 
@@ -36,7 +36,7 @@
 
 ## 📖 About The Project
 
-RAGify is a document Q&A platform that leverages **Retrieval-Augmented Generation (RAG)** to provide accurate, context-aware answers from your own documents. Users can upload PDFs, text files, or Excel spreadsheets, which are then processed and indexed for semantic search.
+SMART-RAG is a document Q&A platform that leverages **Retrieval-Augmented Generation (RAG)** to provide accurate, context-aware answers from your own documents. Users can upload PDFs, text files, or Excel spreadsheets, which are then processed and indexed for semantic search.
 
 By combining advanced document parsing, vector search, and generative AI, RAGify makes large and complex documents easily searchable through natural language queries, saving time and unlocking insights from your data.
 
@@ -163,7 +163,10 @@ The backend provides the following RESTful API endpoints, which are consumed by 
 
 ---
 
-## 👥 Authors
+## 👥 Author
+-   **Aditya Potdar** (PICT, Pune ECE 2027)
+
+## 👥 Collaborators
+
 -   **Manas Pawar** (PICT, Pune IT 2027)
 -   **Soham Dawkhar** (PICT, Pune ECE 2027)
--   **Aditya Potdar** (PICT, Pune ECE 2027)

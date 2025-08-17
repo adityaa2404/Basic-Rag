@@ -14,7 +14,7 @@ if "messages" not in st.session_state:
 
 # UI 
 st.set_page_config(page_title="📄 Document Q&A", layout="wide")
-st.title("📄 Welcome to RAGify")
+st.title("📄 Welcome to SMART-RAG")
 
 def remove_file(filename):
     """Callback function to handle file removal."""
