@@ -13,7 +13,7 @@ app = FastAPI()
 # --- CORS Middleware ---
 origins = [
     "http://localhost:3000",
-    "localhost:3000"
+    "localhost:3000","https://basic-rag-1.onrender.com/"
 ]
 app.add_middleware(
     CORSMiddleware,
