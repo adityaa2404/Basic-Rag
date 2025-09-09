@@ -1,0 +1,15 @@
+# .gitignore
+
+# Backend
+backend/venv
+backend/uploads
+backend/.env
+**/__pycache__
+
+# Frontend
+frontend/node_modules
+frontend/build
+
+# IDE / OS specific
+.vscode
+.DS_Store

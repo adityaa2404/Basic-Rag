@@ -1,0 +1,17 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+python-multipart  # For file uploads
+# Add all dependencies from your original script
+google-generativeai
+pinecone-client
+langchain-google-genai
+langchain-pinecone
+langchain
+langchain-community
+pymupdf
+unstructured # For UnstructuredExcelLoader
+pandas
+openpyxl # For pandas excel reading
+tiktoken
+gunicorn
