@@ -3,7 +3,7 @@
 This project is a complete web application that allows you to upload documents (PDF, TXT, Excel) and ask questions about their content. It uses the Retrieval-Augmented Generation (RAG) pattern with Google's Gemini Pro and Pinecone's vector database to provide accurate, context-aware answers.
 
 
-*(**Note**: Replace the line above with a screenshot of your running application!)*
+
 
 ---
 
